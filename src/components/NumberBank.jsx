@@ -18,10 +18,6 @@ export default function NumberBank() {
             for(const num of bank)
                 dispatch(sortAll());
     }
-
-
-
-
     
     return (
         <>
