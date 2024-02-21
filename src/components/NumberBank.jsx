@@ -11,10 +11,12 @@ export default function NumberBank() {
         e.preventDefault();
         const action = e.nativeEvent.submitter.name;
 
-        if(action === "sort1")
-            dispatch(sort1(bank));
+        if(action === "sort1") {
+            dispatch(sort1());
+        }
         if(action === "sortall")
-            dispatch(sortAll(bank));
+            for(const num of bank)
+                dispatch(sortAll());
     }
 
 
