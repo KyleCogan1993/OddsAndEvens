@@ -9,10 +9,11 @@ function App() {
 
   return (
     <>
-
+      <Provider store={store}>
          <AddNumber />
          <NumberBank />
          <SortedNumbers />
+      </Provider>
 
     </>
   )
