@@ -10,16 +10,15 @@ const sortSlice = createSlice({
     name: "slice",
     initialState,
     reducers : {
-        addNumber: (state, {nums}) => {
-            nums.forEach(num => {
-                state.bank.push(num)
-            });
+        addNumber: (state, {payload: {nums}}) => {
+            for(const num of nums)
+                state.bank.push(num);
         },
-        sort1: (state, {nums}) => {
+        sort1: (state, {payload: {nums}}) => {
             const num = nums.pop();
             num % 2 === 0 ? state.evens.push(num) : state.odds.push(num);
         },
-        sortAll: (state, {nums}) => {
+        sortAll: (state, {payload: {nums}}) => {
             while(nums.length != 0) {
             const num = nums.pop();
             num % 2 === 0 ? state.evens.push(num) : state.odds.push(num);
