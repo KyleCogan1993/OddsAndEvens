@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const sortSlice = createSlice({
-    name: slice,
+    name: "slice",
     initialState,
     reducers : {
         addNumber: (state, {nums}) => {
