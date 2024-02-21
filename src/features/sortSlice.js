@@ -19,7 +19,7 @@ const sortSlice = createSlice({
             num % 2 === 0 ? state.evens.push(num) : state.odds.push(num);
         },
         sortAll: (state) => {
-            while(nums.length != 0) {
+            while(state.bank.length != 0) {
                 const num = state.bank.pop();
                 num % 2 === 0 ? state.evens.push(num) : state.odds.push(num);
             }
