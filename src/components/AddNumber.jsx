@@ -10,8 +10,10 @@ export default function AddNumber() {
     
     const onAdd = (e) => {
         e.preventDefault();
-        let nums = inpBank.split(" ").map(Number);
-        dispatch(addNumber({nums}));
+        if(inpBank.length !== 0) {
+            let nums = inpBank.split(" ").map(Number);
+            dispatch(addNumber({nums}));
+        }
     }
     
     return (
