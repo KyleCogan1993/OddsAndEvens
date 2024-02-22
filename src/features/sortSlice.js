@@ -15,12 +15,12 @@ const sortSlice = createSlice({
                 state.bank.push(num);
         },
         sort1: (state) => {
-            const num = state.bank.pop();
+            const num = state.bank.shift();
             num % 2 === 0 ? state.evens.push(num) : state.odds.push(num);
         },
         sortAll: (state) => {
             while(state.bank.length != 0) {
-                const num = state.bank.pop();
+                const num = state.bank.shift();
                 num % 2 === 0 ? state.evens.push(num) : state.odds.push(num);
             }
         }
